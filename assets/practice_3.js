@@ -97,7 +97,11 @@ function save(foods) {
         foodA.push(foods[i]);
       }
     }
-    alert(`The list with food including letter A is: ${foodA}`);
+    if (foodA.length>0) {
+      alert(`The list with food including letter A is: ${foodA}`);
+    } else {
+      alert('There is no food including letter A!');
+    }
     return foods;
   }
   
@@ -117,7 +121,11 @@ function save(foods) {
         }
       }
     }
-    alert(`The list of food with 5 letters is: ${food5}`);
+    if (food5.length>0) {
+      alert(`The list of food with 5 letters is: ${food5}`);
+    } else {
+      alert('There is no food with 5 letters!');
+    }
     return foods;
   }
   
