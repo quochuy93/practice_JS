@@ -85,7 +85,7 @@ function save(foods) {
     return finalFood;
   }
   
-  var finalFood = foods;
+  // var finalFood = foods;
   
   // 4. Tao mot mang moi gom cac mon chua chu "a"
   function createAfood(foods) {
