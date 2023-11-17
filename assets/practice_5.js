@@ -1,6 +1,4 @@
 // 1. Go vao o input va hien thi ket qua duoi the p ngay ben duoi (input)
-// var input = prompt('Please enter a word for p:')
-// document.getElementsByClassName("p1")[0].innerHTML = document.getElementById("myText").value
 var input = document.getElementById("myText");
 input.addEventListener("keyup", function (event) {
   if (event.key == "Enter") {
@@ -10,7 +8,6 @@ input.addEventListener("keyup", function (event) {
 });
 
 // 2. Khi change gia tri duoc chon trong radio thi thay doi gia tri hien thi o the p ben duoi
-// document.getElementsByClassName("p2")[0].innerHTML =  document.getElementsByName("value").value;
 var choose = document.getElementById("register");
 choose.addEventListener("click",(event2) =>{
   document.querySelector(".p2").innerHTML += event2.target.value + "<br>";
@@ -20,6 +17,6 @@ choose.addEventListener("click",(event2) =>{
 // 3. Khi an nut hien thi thong tin: ten nut, ma nut,co an ctrl ko
 document.addEventListener("keydown", function(event3){
   document.querySelector(".keyInfor p:first-child span").innerHTML = event3.key;
-  document.querySelector(".keyCode span").innerHTML = event3.which;
+  document.querySelector(".keyCode span").innerHTML = event3.keyCode;
   document.querySelector(".keyInfor p:last-child span").innerHTML = event3.ctrlKey;
 })
