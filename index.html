@@ -20,21 +20,25 @@
     <h1 class="h1">Practice JavaScript</h1>
 
     <br />
+    <div class="wrap">
+      <input type="text" id="myText" value="" placeholder="Enter here"/>
+      <p class="p1"></p>
+    </div>
     <form id="register">
-      <input type="text" id="myText" placeholder="check" onblur="getVal()" />
-
       <div class="choose">
-        <label for=""> <input type="radio" name="value" value="A" />A </label>
+        <label for=""> <input type="radio" name="value" value="A" checked />A </label>
         <label for=""> <input type="radio" name="value" value="B" />B </label>
+        <label for=""> <input type="radio" name="value" value="C" />C </label>
       </div>
-
-      <button class="btn" id="btn">Submit</button>
     </form>
     <br />
-    <p class="p1"></p>
+
     <p class="p2"></p>
-    <p class="p3"></p>
-    <p class="p4"></p>
+    <div class="keyInfor">
+    <p class="key">Key: <span></span></p>
+    <p class="keyCode">Key Code: <span></span></p>
+    <p class="ctrl">Pressed Ctrl: <span></span></p>
+  </div>
   </body>
 
   <script></script>

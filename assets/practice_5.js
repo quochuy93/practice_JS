@@ -1,27 +1,25 @@
 // 1. Go vao o input va hien thi ket qua duoi the p ngay ben duoi (input)
 // var input = prompt('Please enter a word for p:')
 // document.getElementsByClassName("p1")[0].innerHTML = document.getElementById("myText").value
-function getVal() {
-    var val =document.getElementById("myText").value;
-    document.getElementsByClassName("p1")[0].innerHTML = val;
-}
+var input = document.getElementById("myText");
+input.addEventListener("keyup", function (event) {
+  if (event.key == "Enter") {
+    var x = input.value;
+    document.querySelector(".wrap .p1").innerHTML += x + "<br>";
+  }
+});
+
 // 2. Khi change gia tri duoc chon trong radio thi thay doi gia tri hien thi o the p ben duoi
 // document.getElementsByClassName("p2")[0].innerHTML =  document.getElementsByName("value").value;
+var choose = document.getElementById("register");
+choose.addEventListener("click",(event2) =>{
+  document.querySelector(".p2").innerHTML += event2.target.value + "<br>";
+})
 
-var value2 = document.getElementsByName('value');
-
-for (var i = 0, length = value2.length; i < length; i++) {
-  if (value2[i].checked) {
-    document.getElementsByClassName("p2")[0].innerHTML = value2[i].value;
-    break;
-  }
-}
 
 // 3. Khi an nut hien thi thong tin: ten nut, ma nut,co an ctrl ko
-
-    document.querySelector(".btn").onclick = function() {
-        document.getElementsByClassName("p3")[0].innerHTML = document.querySelector(".btn").innerHTML;
-        document.getElementsByClassName("p4")[0].innerHTML = document.querySelector(".btn").id;
-
-    }
-
+document.addEventListener("keydown", function(event3){
+  document.querySelector(".keyInfor p:first-child span").innerHTML = event3.key;
+  document.querySelector(".keyCode span").innerHTML = event3.which;
+  document.querySelector(".keyInfor p:last-child span").innerHTML = event3.ctrlKey;
+})
