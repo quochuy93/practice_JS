@@ -9,7 +9,7 @@ input.addEventListener("keyup", function (event) {
 
 // 2. Khi change gia tri duoc chon trong radio thi thay doi gia tri hien thi o the p ben duoi
 var choose = document.getElementById("register");
-choose.addEventListener("click",(event2) =>{
+choose.addEventListener("change",(event2) =>{
   document.querySelector(".p2").innerHTML += event2.target.value + "<br>";
 })
 
